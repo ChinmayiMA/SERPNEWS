@@ -1,203 +1,465 @@
-📰 SerpNews
-News, but make it understandable.
-SerpNews is an AI-powered news intelligence platform that turns scattered news articles into short briefings, evolving story timelines, information-change tracking, and Gen-Z "tea" explanations.
+# ☕📰 SerpNews
 
-Instead of making users read dozens of articles to understand what is happening, SerpNews answers:
+### **News, but with context.**
 
-What happened? → How did we get here? → What changed? → What's happening now?
+**SerpNews** is an AI-powered news discovery and intelligence platform that turns the overwhelming flow of online news into a clean, contextual, and easy-to-understand experience.
 
-✨ Features
-🔥 Trending News
-Stay updated with the latest happenings across multiple categories:
+Instead of jumping between multiple news websites, users can search for a topic and explore **relevant stories, different sources, breaking developments, and the bigger picture — all in one place.**
 
-🌍 World
-🇮🇳 India
-🏛️ Politics
-💻 Technology
-💼 Business
-🔬 Science
-⚽ Sports
-🎬 Entertainment
-News is fetched using SerpAPI and converted into concise AI-generated summaries.
+> **SerpNews — Sip the news. Know the story.**
 
-🧵 Long-Term Story Tracking
-Some news stories don't end after one article.
+---
 
-SerpNews groups related coverage into a single Story Hub for events such as:
+## 🚨 The Problem
 
-Wars and conflicts
-Government bills
-Elections
-Court cases
-International disputes
-Major investigations
-Scientific developments
-Economic events
-Instead of reading hundreds of disconnected articles, users can follow one continuously updated story.
+The internet gives us access to more news than ever — but finding the **right information** is becoming harder.
 
-📅 Interactive Timeline
-Understand how an event developed over time.
+Users often face:
 
-Each major story contains a chronological timeline:
+* 📰 Too many news sources
+* 🔀 Conflicting headlines and narratives
+* 🔍 Difficulty finding all relevant coverage of an event
+* ⏳ Time-consuming article-by-article searching
+* 📱 Information overload
+* 🧩 Lack of context behind developing stories
+* 🧠 Difficulty understanding complex news quickly
 
-JAN 10
-Initial announcement
-       ↓
-JAN 18
-Major development
-       ↓
-FEB 03
-Government response
-       ↓
-FEB 21
-New information emerges
-       ↓
-MAR 05
-Latest update
-Every timeline event includes its date, explanation, and relevant sources.
+A user shouldn't need to search through ten different websites just to understand **what happened and why it matters.**
 
-🔍 How The Story Changed
-News can evolve as new information becomes available.
+---
 
-SerpNews compares reports from different points in time and highlights:
+## 💡 Our Solution
 
-Initial reports
-Later confirmations
-Corrections
-Retractions
-Contradictory claims
-Unverified information
-Changes in headlines or narratives
-Information that was later disproven
-The application clearly separates:
+**SerpNews** acts as an intelligent layer over news search.
 
-Verified information Unverified claims Disputed information Corrected information
+Users simply enter a topic, event, person, or keyword.
 
-SerpNews does not automatically label conflicting information as "fake news". Instead, it provides the sources and timeline so users can understand how the information changed.
+SerpNews then retrieves relevant news results using **SerpApi**, organizes them into an intuitive interface, and uses AI-powered processing to help users understand the information.
 
-☕ News Tea
-News doesn't have to be boring.
+### The experience:
 
-News Tea is SerpNews's Gen-Z mode that explains the same news in a casual, conversational style.
+**Search → Discover → Compare → Understand**
 
-Instead of:
+---
 
-"The government announced amendments to..."
+# ✨ Key Features
 
-You might get:
+### 🔎 1. Intelligent News Search
 
-"Okay, here's the tea 👀" Here's what happened, who's involved, why everyone's talking about it, and what changed afterward.
+Search for anything:
 
-Users can switch between:
+* Technology
+* Business
+* Science
+* Sports
+* Entertainment
+* Local events
+* Global events
+* Trending topics
 
-📰 Normal Briefing and ☕ News Tea
+SerpApi's news/search infrastructure provides structured results that SerpNews can process and present in a unified interface.
 
-The tone changes, but the underlying facts do not.
+---
 
-🤖 AI-Powered Intelligence
-SerpNews uses AI to:
+### 📰 2. Multi-Source News Discovery
 
-Summarize lengthy articles
-Group related articles into stories
-Detect developing stories
-Generate chronological timelines
-Compare reports published at different times
-Identify changes and corrections
-Explain conflicting information
-Generate "What happened?" summaries
-Generate "Why does it matter?" explanations
-Generate News Tea briefings
-AI-generated information remains connected to the underlying news sources.
+Instead of relying on a single publication, SerpNews surfaces coverage from multiple sources.
 
-🔎 Search
-Search for:
+Each result can contain:
 
-Topics
-Events
-People
-Countries
-Companies
-Ongoing stories
-Search results can be explored through:
+* Article headline
+* News source
+* Publication time
+* Article snippet
+* Thumbnail
+* Original article link
 
-Latest
-  ↓
-Story Overview
-  ↓
-Timeline
-  ↓
-How It Changed
-  ↓
-Sources
-🗄️ Data Architecture
-SerpNews uses SerpAPI as the primary external news-data source.
+This allows users to discover **how different outlets are covering the same topic.**
 
-                 ┌──────────────┐
-                 │   SerpAPI    │
-                 └──────┬───────┘
-                        ↓
-                News Retrieval
-                        ↓
-                 ┌──────────────┐
-                 │   Database   │
-                 └──────┬───────┘
-                        ↓
-              Story Clustering
-                        ↓
-                 AI Processing
-                ↙       ↓       ↘
-          Summaries   Timeline   Changes
-                ↘       ↓       ↙
-                  ┌───────────┐
-                  │  SerpNews │
-                  │     UI    │
-                  └───────────┘
-Stored information can include:
+---
 
-Article title
-Source
-URL
-Publication date
-Category
-Article snippet
-Story ID
-AI summary
-Timeline event
-Information status
-Processing metadata
-🛠️ Tech Stack
-Suggested architecture:
+### 🧠 3. AI-Powered Context
 
-Frontend
+SerpNews goes beyond simply displaying headlines.
 
-React
-Vite
-CSS / Tailwind CSS
-Backend
+AI can help users understand:
 
-Node.js
-Express
-Data
+> **What happened?**
+> **Why is it important?**
+> **What happened before this?**
+> **What could users need to know next?**
 
-SerpAPI
-Database for processed news and story history
-AI
+The goal is to make complicated news easier to understand without requiring users to read dozens of articles.
 
-Generative AI for summarization, story clustering, timeline generation, and News Tea mode
-🗺️ Future Improvements
-Personalized news feeds
-AI-powered daily briefings
-Push notifications for developing stories
-Source credibility indicators
-Multi-language news summaries
-Voice-based news briefing
-"Catch me up" feature for stories the user hasn't followed
-News history explorer
-Bias/context comparison across sources
-Personalized topic tracking
-🎯 Vision
-SerpNews isn't designed to give users more news.
+---
 
-It's designed to help them understand the news they already have.
+### 🔥 4. Trending & Breaking News
 
-Read less. Understand more. Get the tea. ☕📰
+SerpNews can surface recently published stories and emerging topics so users can quickly identify what's currently being discussed.
+
+The underlying SerpApi ecosystem supports news-focused search and sorting capabilities, including Google News results.
+
+---
+
+### 🧩 5. Story-Based Discovery
+
+Instead of treating every article as a completely separate piece of information, SerpNews can group related coverage around a common event or topic.
+
+For example:
+
+**Topic: Major AI Model Launch**
+
+→ Company announcement
+→ Technical coverage
+→ Industry reaction
+→ Expert opinions
+→ Market response
+→ Follow-up developments
+
+This gives users the **story behind the headlines**, rather than isolated articles.
+
+---
+
+### 🌍 6. Localized News
+
+Search results can be adapted based on geographical context and language preferences.
+
+SerpApi supports localization parameters such as country, language, and location for Google search/news experiences.
+
+This makes SerpNews suitable for both:
+
+**🌎 Global news**
+
+and
+
+**📍 Local news discovery**
+
+---
+
+### ☕ 7. The "News + Tea" Experience
+
+SerpNews isn't designed to feel like another traditional news portal.
+
+The interface combines:
+
+**📰 News discovery**
+
+with
+
+**☕ Casual conversation / context**
+
+creating a more approachable way to consume current events.
+
+The visual identity uses a **beige + cherry-red** palette with a newspaper/tea-inspired aesthetic.
+
+---
+
+# 🏗️ How It Works
+
+```text
+                USER
+                  │
+                  ▼
+          ┌───────────────┐
+          │   SerpNews    │
+          │   Interface   │
+          └───────┬───────┘
+                  │
+                  ▼
+          ┌───────────────┐
+          │ Search Query  │
+          └───────┬───────┘
+                  │
+                  ▼
+          ┌───────────────┐
+          │    SerpApi    │
+          │ News / Search │
+          └───────┬───────┘
+                  │
+                  ▼
+       ┌─────────────────────┐
+       │ Structured Results  │
+       │                     │
+       │ • Headlines         │
+       │ • Sources           │
+       │ • Dates             │
+       │ • Snippets          │
+       │ • Images            │
+       │ • Links             │
+       └──────────┬──────────┘
+                  │
+                  ▼
+          ┌───────────────┐
+          │ AI Processing │
+          └───────┬───────┘
+                  │
+                  ▼
+       ┌─────────────────────┐
+       │ Contextualized News │
+       │ & Story Discovery   │
+       └──────────┬──────────┘
+                  │
+                  ▼
+                 USER
+```
+
+---
+
+# 🛠️ Tech Stack
+
+### Frontend
+
+* React
+* TypeScript
+* HTML5
+* CSS
+* Responsive UI
+
+### Backend / APIs
+
+* SerpApi
+* REST APIs
+
+### AI Layer
+
+* LLM-powered summarization
+* Context generation
+* Topic understanding
+* Story clustering / contextualization
+
+### Data
+
+SerpApi provides structured search/news results that can include article titles, links, sources, dates, snippets and thumbnails.
+
+---
+
+# 🔑 SerpApi Integration
+
+SerpNews uses **SerpApi as its primary news discovery layer.**
+
+Depending on the feature, SerpNews can use:
+
+### Google News API
+
+```text
+engine=google_news
+```
+
+This retrieves results from Google News.
+
+### Google News Results API
+
+```text
+engine=google
+tbm=nws
+```
+
+This retrieves results from the News tab of Google Search.
+
+### Google Search API
+
+SerpNews can also use general Google Search results when broader web discovery is required. SerpApi provides structured results across multiple result types.
+
+---
+
+# 🎯 What Makes SerpNews Different?
+
+Traditional news platforms generally focus on:
+
+> **"Here are today's articles."**
+
+SerpNews focuses on:
+
+> **"Here's what's happening, who's reporting it, and what you should understand about it."**
+
+The project combines:
+
+**Search + News Discovery + Multi-Source Coverage + AI Context**
+
+into a single experience.
+
+---
+
+# 👥 Target Users
+
+SerpNews can be useful for:
+
+* 🎓 Students
+* 💻 Developers & tech enthusiasts
+* 📊 Researchers
+* 🧑‍💼 Professionals
+* 📰 News readers
+* 🌎 People following global events
+* 🔍 Users researching a specific topic
+* 📚 Anyone who wants quick context instead of information overload
+
+---
+
+# 🌟 Example User Flow
+
+### User searches:
+
+```text
+"Latest developments in artificial intelligence"
+```
+
+### SerpNews retrieves:
+
+```text
+📰 Article 1 — Source A
+📰 Article 2 — Source B
+📰 Article 3 — Source C
+📰 Article 4 — Source D
+```
+
+### SerpNews then helps organize the information:
+
+```text
+WHAT HAPPENED?
+↓
+Recent AI developments
+
+WHO IS INVOLVED?
+↓
+Companies / researchers / organizations
+
+WHAT ARE SOURCES REPORTING?
+↓
+Different coverage from multiple outlets
+
+WHY DOES IT MATTER?
+↓
+AI-generated context
+
+WHAT'S NEXT?
+↓
+Relevant follow-up developments
+```
+
+---
+
+# 🔮 Future Scope
+
+SerpNews can evolve into a broader **AI-powered news intelligence platform.**
+
+### Planned possibilities:
+
+* 🎙️ AI-generated audio news briefings
+* 🌐 Multilingual news
+* 📍 Hyperlocal news discovery
+* 📈 Topic trend visualization
+* 🧵 Automatic story timelines
+* 🔔 Personalized topic alerts
+* 🧠 Source comparison
+* 🔎 Claim/context exploration
+* 📊 News trend analytics
+* 🤖 Conversational news assistant
+* 📰 Personalized daily news digest
+
+---
+
+# 🔐 Responsible News Consumption
+
+SerpNews is designed to help users **discover and understand information**, not replace the original reporting.
+
+Whenever possible, users should be able to access the original article and source.
+
+AI-generated context should be treated as an aid to understanding, while the underlying reporting remains the primary source.
+
+---
+
+# 🚀 Getting Started
+
+## 1. Clone the repository
+
+```bash
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+cd SerpNews
+```
+
+## 2. Install dependencies
+
+```bash
+npm install
+```
+
+## 3. Configure environment variables
+
+Create a `.env` file:
+
+```env
+SERPAPI_KEY=your_serpapi_key
+```
+
+If your project uses a separate AI provider:
+
+```env
+AI_API_KEY=your_ai_api_key
+```
+
+> Never commit API keys or secrets to GitHub.
+
+## 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Then open the local URL shown by your development environment.
+
+---
+
+# 📁 Project Structure
+
+```text
+SerpNews/
+│
+├── public/
+│   └── assets/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── utils/
+│   └── App.*
+│
+├── .env
+├── package.json
+├── README.md
+└── ...
+```
+
+*The exact structure may vary depending on the implementation.*
+
+---
+
+# 🏆 Hackathon Vision
+
+SerpNews was built around a simple question:
+
+> **What if finding the news wasn't the hard part — understanding it was?**
+
+With SerpApi providing powerful search and news retrieval capabilities, SerpNews focuses on the layer that comes next:
+
+**organizing information into a clearer story.**
+
+---
+
+# 📜 Disclaimer
+
+SerpNews is an independent project created for educational and hackathon purposes.
+
+News content belongs to its respective publishers and sources. SerpNews does not claim ownership of third-party articles.
+
+AI-generated summaries or contextual information may contain errors and should be verified against the original sources.
+
+---
+
+# ❤️ Built With
+
+**React • TypeScript • SerpApi • AI • Curiosity ☕**
+
+### **SerpNews**
+
+> **Sip the news. Know the story.**
