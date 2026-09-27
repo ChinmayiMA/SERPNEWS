@@ -83,6 +83,19 @@ export const AudioPlayer: React.FC<Props> = ({ briefingText, storyTitle }) => {
     setIsPlaying(false);
   };
 
+  // Once a fresh audioUrl is set, the <audio> element only picks up the new
+  // `src` on the next render — nothing in fetchAudio() actually tells the
+  // browser to start playback. Without this effect, isPlaying flips to true
+  // (button shows Pause, bars animate) but no sound ever plays.
+  useEffect(() => {
+    if (audioUrl && audioRef.current) {
+      audioRef.current.play().catch((err) => {
+        console.warn('Audio playback was blocked or failed:', err);
+        setIsPlaying(false);
+      });
+    }
+  }, [audioUrl]);
+
   useEffect(() => {
     return () => {
       if (audioUrl) {
