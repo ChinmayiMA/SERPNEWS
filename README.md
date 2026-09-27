@@ -1,4 +1,4 @@
-# ☕📰 SerpNews
+# 📰 SerpNews
 
 ### **News, but with context.**
 
